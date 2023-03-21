@@ -1,15 +1,12 @@
 <template>
   <NavBar />
+  <Hero />
 </template>
 
-<script>
+<script setup>
 import NavBar from './components/NavBar.vue'
-export default {
-  name: 'App',
-  components: {
-    NavBar
-  }
-}
+import Hero from './components/HeroComponent.vue'
+
 </script>
 <style lang="scss">
 @import './variables.scss';
@@ -24,11 +21,13 @@ export default {
     font-family: 'Epilogue', sans-serif;
     font-size: 18px;
     color: $black;
-    overflow: hidden;
   }
 
   body {
     background-color: $white;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
   }
 
 
